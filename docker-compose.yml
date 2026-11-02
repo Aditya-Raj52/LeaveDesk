@@ -28,7 +28,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql://postgres:postgrespassword2026@db:5432/leavedesk
+      DATABASE_URL: postgresql+psycopg2://postgres:postgrespassword2026@db:5432/leavedesk
       SECRET_KEY: leavedesk-super-secret-jwt-key-2026-production-ready
       POLICY_FILE_PATH: policies/LeaveDesk_Employee_Handbook_2026.md
     ports:
